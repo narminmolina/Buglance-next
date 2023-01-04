@@ -1,0 +1,96 @@
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.ReactModal__Overlay {
+  z-index: 1050;
+  overflow: auto !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  .ReactModal__Content {
+    position: relative !important;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 636px;
+    padding: 0 !important;
+    margin: $d-64 auto;
+    border: 0 !important;
+    border-radius: $d-12 !important;
+    @include mobile {
+      top: 0 !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100%;
+      margin: 0;
+      border-radius: 0 !important;
+      height: 100% !important;
+    }
+    .modal-header {
+      padding: $d-37;
+      border-radius: $d-12 $d-12 0 0;
+      h1 {
+        font-size: $fs-35;
+        line-height: $line-height-120;
+      }
+      p {
+        margin-top: 16px;
+        font-size: $fs-16;
+        line-height: $line-height-140;
+      }
+      button {
+        position: absolute;
+        top: $d-7;
+        right: $d-7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $d-28;
+        height: $d-28;
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+      }
+      @include mobile {
+        padding: $m-41 $m-17 $m-27 $m-17;
+        h1 {
+          font-size: $fs-19;
+          line-height: $line-height-120;
+        }
+      }
+    }
+    .modal-body {
+      padding: 0 $d-37 $d-37;
+      @include mobile {
+        padding: 0 $m-17 $m-14 $m-17;
+      }
+      &.success-body {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      form.modal-body-form {
+        .custom-input,
+        .custom-checkbox {
+          margin-bottom: $d-37;
+          @include mobile {
+            margin-bottom: $m-27;
+          }
+        }
+      }
+      .modal-success-wrapper {
+        svg {
+          width: 100%;
+        }
+      }
+    }
+    .modal-footer {
+      padding: $d-37;
+      border-radius: 0 0 $d-12 $d-12;
+      background-color: #f5f5f5;
+      @include mobile {
+        padding: $m-22 $m-17 $m-22 $m-17;
+        border-radius: 0;
+      }
+    }
+  }
+}

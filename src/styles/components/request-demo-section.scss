@@ -1,0 +1,28 @@
+.schedule-a-call {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 64px 0;
+    border-bottom: 3px solid #000;
+    @include mobile {
+      padding: 33px 0;
+      flex-direction: column;
+    }
+    .custom-link-button {
+      @include mobile {
+        width: 100%;
+        display: block;
+        height: 41px;
+        padding: 12.5px !important;
+      }
+    }
+    .section-title-secondary {
+      padding-top: 0;
+      padding-bottom: 0;
+      @include mobile {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

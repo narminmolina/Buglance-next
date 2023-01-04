@@ -1,0 +1,165 @@
+.header {
+  // position: fixed;
+  // z-index: 1000;
+  // top: 0;
+  // left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $d-85;
+  background-color: $white;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      &.mobile-logo {
+        display: none;
+        @include mobile {
+          display: flex;
+        }
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+    .buglance-logo {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+      cursor: pointer;
+      svg {
+        margin-right: $d-12;
+        @include mobile {
+          margin-right: 10px;
+        }
+      }
+    }
+    nav.list-desktop {
+      margin-right: $d-37;
+      ul.list-desktop-list {
+        display: flex;
+        li.list-desktop-list-item {
+          &:not(:last-child) {
+            margin-right: $d-37;
+          }
+          a {
+            color: $black;
+            font-size: $fs-16;
+            font-weight: $fw-600;
+            line-height: $line-height-132;
+            &.active {
+              color: $c-0094f1;
+            }
+          }
+        }
+      }
+      #main-test-my-app {
+        display: none;
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+    nav.list-mobile {
+      display: none;
+      height: -webkit-fill-available;
+      @include mobile {
+        position: absolute;
+        z-index: 999;
+        top: 51px;
+        left: 0;
+        display: none;
+        overflow: auto;
+        width: 100%;
+        max-height: 100vh;
+        padding-bottom: $m-22;
+        background-color: white;
+        &.opened {
+          display: block;
+        }
+        ul {
+          display: block;
+          padding-bottom: 40px;
+          li {
+            padding-left: $m-17;
+            padding-right: $m-17;
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+            a {
+              display: block;
+              padding-top: 20px;
+              border-bottom: 1px solid $c-e9e9e9;
+              color: $black;
+              font-size: $fs-20;
+              font-weight: $fw-600;
+              line-height: $line-height-150;
+            }
+          }
+        }
+        .header-test-my-app {
+          display: block;
+        }
+      }
+    }
+    .header-options {
+      display: flex;
+      align-items: center;
+      .hamburger {
+        position: relative;
+        display: none;
+        width: 21px;
+        height: 21px;
+        // button reset
+        padding: 0;
+        margin-left: $d-16;
+        border: 0;
+        background: unset;
+        &:focus {
+          outline: none;
+        }
+        &.opened {
+          .line {
+            &:first-child {
+              top: 50%;
+              transform: rotate(45deg);
+            }
+            &:last-child {
+              top: 50%;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        .line {
+          position: absolute;
+          display: block;
+          width: $d-21;
+          height: 2px;
+          background-color: $black;
+          transition: 0.2s cubic-bezier(0.27, 0.02, 0.32, 0.99);
+          transform: rotate(0);
+          transform-origin: center;
+
+          &:first-child {
+            top: 27%;
+          }
+          &:last-child {
+            bottom: 27%;
+          }
+        }
+        @include mobile {
+          display: block;
+        }
+      }
+    }
+  }
+  @include mobile {
+    padding: 0 17px;
+  }
+  @include mobile {
+    height: $m-51;
+  }
+}

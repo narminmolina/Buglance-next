@@ -1,0 +1,305 @@
+@import '../abstracts/functions.scss';
+
+//* Breakpoint
+$mobile-breakpoint: 480px;
+//* Typography
+//? Font Families
+$poppins: 'Poppins', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+$font-family-base: $poppins; //! Base
+//? Font Sizes
+$font-size-base: 16px; //! Base Size
+$font-size-scale-ratio: 1.3; //! Scale Value Between Steps
+// Steps
+// Negative Step
+$fs-12: _scale($font-size-base, 1, $font-size-scale-ratio, false); // 12 - (12.31)
+// Base Steps
+$fs-16: _scale($font-size-base, 0, $font-size-scale-ratio, true); //  16 - (16.00)
+// Positive Steps
+$fs-21: _scale($font-size-base, 1, $font-size-scale-ratio, true); //  21 - (20.80)
+$fs-27: _scale($font-size-base, 2, $font-size-scale-ratio, true); //  27 - (27.04)
+$fs-35: _scale($font-size-base, 3, $font-size-scale-ratio, true); //  35 - (35.15)
+$fs-46: _scale($font-size-base, 4, $font-size-scale-ratio, true); //  46 - (45.70)
+$fs-59: _scale($font-size-base, 5, $font-size-scale-ratio, true); //  59 - (59.41)
+//
+$mobile-font-size-base: 14px; //! Base Size
+$mobile-font-size-scale-ratio: 1.1; //! Scale Value Between Steps
+// Steps
+// Negative Step
+$fs-13: _scale($mobile-font-size-base, 1, $mobile-font-size-scale-ratio, false); //  13 - (12.73)
+// Base Steps
+$fs-14: _scale($mobile-font-size-base, 0, $mobile-font-size-scale-ratio, true); //  14 - (14.00)
+// Positive Steps
+$fs-15: _scale($mobile-font-size-base, 1, $mobile-font-size-scale-ratio, true); //  15 - (15.40)
+$fs-17: _scale($mobile-font-size-base, 2, $mobile-font-size-scale-ratio, true); //  17 - (16.94)
+$fs-19: _scale($mobile-font-size-base, 3, $mobile-font-size-scale-ratio, true); //  19 - (18.63)
+$fs-20: _scale($mobile-font-size-base, 4, $mobile-font-size-scale-ratio, true); //  20 - (20.50)
+$fs-23: _scale($mobile-font-size-base, 5, $mobile-font-size-scale-ratio, true); //  23 - (22.55)
+//? Font Weights
+$fw-100: 100; // 100 (lighter)
+$fw-200: 200; // 200
+$fw-300: 300; // 300
+$fw-400: 400; // 400 (normal)
+$fw-500: 500; // 500
+$fw-600: 600; // 600
+$fw-700: 700; // 700 (bold)
+$fw-800: 800; // 800
+$fw-900: 900; // 900 (bolder)
+//? Line Heights
+//
+$line-height-115: 1.15; //! Base Size
+$line-height-117: 1.17; //! Base Size
+$line-height-120: 1.2; //! Base Size
+$line-height-122: 1.22; //! Base Size
+$line-height-128: 1.28; //! Base Size
+$line-height-132: 1.32; //! Other Size
+$line-height-136: 1.36; //! Other Size
+$line-height-140: 1.4; //! Other Size
+$line-height-150: 1.5; //! Other Size
+$line-height-160: 1.6; //! Other Size
+//* Dimensions
+$dimension-base: 16px; //! Base Size
+$dimension-scale-ratio: 1.32; //! Scale Value Between Steps
+// Steps
+// Negative Step
+$d-7: _scale($dimension-base, 3, $dimension-scale-ratio, false); //   7 - (6.96)
+$d-9: _scale($dimension-base, 2, $dimension-scale-ratio, false); //   9 - (9.18)
+$d-12: _scale($dimension-base, 1, $dimension-scale-ratio, false); //  12 - (12.12)
+// Base Step
+$d-16: _scale($dimension-base, 0, $dimension-scale-ratio, true); //  16 - (16.00)
+// Positive Steps
+$d-21: _scale($dimension-base, 1, $dimension-scale-ratio, true); //  21 - (21.12)
+$d-28: _scale($dimension-base, 2, $dimension-scale-ratio, true); //  28 - (27.88)
+$d-37: _scale($dimension-base, 3, $dimension-scale-ratio, true); //  37 - (36.80)
+$d-49: _scale($dimension-base, 4, $dimension-scale-ratio, true); //  49 - (48.58)
+$d-64: _scale($dimension-base, 5, $dimension-scale-ratio, true); //  64 - (64.12)
+$d-85: _scale($dimension-base, 6, $dimension-scale-ratio, true); //  85 - (84.64)
+$d-112: _scale($dimension-base, 7, $dimension-scale-ratio, true); // 112 - (111.72)
+$d-147: _scale($dimension-base, 8, $dimension-scale-ratio, true); // 147 - (147.47)
+$d-194: _scale($dimension-base, 9, $dimension-scale-ratio, true) - 1; //? 194 - (194.66)
+$d-256: _scale($dimension-base, 10, $dimension-scale-ratio, true) - 1; //? 256 - (256.96)
+$d-340: _scale($dimension-base, 11, $dimension-scale-ratio, true); // 340 - (339.18)
+$d-448: _scale($dimension-base, 12, $dimension-scale-ratio, true); // 448 - (447.72)
+// Mobile Steps
+//* Dimensions
+$mobile-base: 14px; //! Base Size
+$mobile-scale-ratio: 1.24; //! Scale Value Between Steps
+// Steps
+// Negative Step
+$m-7: _scale($mobile-base, 3, $mobile-scale-ratio, false); //   7 - (7.34)
+$m-9: _scale($mobile-base, 2, $mobile-scale-ratio, false); //   9 - (9.11)
+$m-11: _scale($mobile-base, 1, $mobile-scale-ratio, false); //  11 - (11.29)
+$m-14: _scale($mobile-base, 0, $mobile-scale-ratio, true); //  14 - (14.00)
+$m-17: _scale($mobile-base, 1, $mobile-scale-ratio, true); //  17 - (17.36)
+$m-22: _scale($mobile-base, 2, $mobile-scale-ratio, true); //  22 - (21.53)
+$m-27: _scale($mobile-base, 3, $mobile-scale-ratio, true); //  27 - (26.69)
+$m-33: _scale($mobile-base, 4, $mobile-scale-ratio, true); //  33 - (33.10)
+$m-41: _scale($mobile-base, 5, $mobile-scale-ratio, true); //  41 - (41.04)
+$m-51: _scale($mobile-base, 6, $mobile-scale-ratio, true); //  51 - (50.89)
+$m-63: _scale($mobile-base, 7, $mobile-scale-ratio, true); // 63 - (63.11)
+$m-78: _scale($mobile-base, 8, $mobile-scale-ratio, true); // 78 - (78.25)
+$m-97: _scale($mobile-base, 9, $mobile-scale-ratio, true); // 97 - (97.03)
+$m-120: _scale($mobile-base, 10, $mobile-scale-ratio, true); // 120 - (120.32)
+$m-149: _scale($mobile-base, 11, $mobile-scale-ratio, true); // 149 - (149.20)
+$m-185: _scale($mobile-base, 12, $mobile-scale-ratio, true); // 185 - (185.01)
+//* Border Radius
+$br-base: 12px; //! Base
+$br-rounded: 100%; //! Rounded
+$br-7: 7px; // 7px
+$br-12: 12px; // 12px
+$br-16: 16px; // 16px
+$br-20: 20px; // 20px
+// TODO: Remove Redundant Border Sizes
+$br-2: 2px; // !2px
+$br-4: 4px; // !4px
+$br-5: 5px; // !5px
+$br-6: 6px; // !6px
+$br-8: 8px; // !8px
+$br-9: 9px; // !9px
+$br-14: 14px; // !14px
+$br-18: 18px; // !18px
+$br-24: 24px; // !24px
+$br-25: 25px; // !25px
+$br-50: 50px; // !50px
+//* Transition
+$transition-base: all 0.3s ease-in-out;
+//* Box Shadow
+$box-shadow-base: 0px 2px 12px rgba(0, 117, 193, 0.08), 0px 2px 4px rgba(0, 117, 193, 0.04), 0px 12px 20px rgba(0, 117, 193, 0.04), 0px 4px 48px rgba(0, 117, 193, 0.04), 0px 2px 16px rgba(0, 117, 193, 0.04);
+//* Colors
+//? Test Cycle Status Colors
+$pending: #eecb4c;
+$active: #00a63a;
+$paused: #ce5ee5;
+$closed: #5cc2ef;
+$declined: #e55e5e;
+$draft: #8f8f8f;
+//? Issue Categories Colors:
+$issue-categories-colors: (
+  logical: #4e66fb,
+  content: #57fcca,
+  visual: #53cafd,
+  usability: #5e004f,
+  security: #fd8955,
+  translation: #9d9d9d,
+  functional: #a156fd,
+  crash: #fd528a,
+  orthographic: #fff15c,
+  recommendation: #a5fc59,
+  test-case: #febc57,
+);
+
+// Issue Categories Variables:
+$logical: #4e66fb;
+$content: #57fcca;
+$visual: #53cafd;
+$usability: #5e004f;
+$security: #fd8955;
+$translation: #9d9d9d;
+$functional: #a156fd;
+$crash: #fd528a;
+$orthographic: #fff15c;
+$recommendation: #a5fc59;
+$test-case: #febc57;
+
+// Colors
+// Main Black & White
+$white: #fff;
+$black: #000;
+// All Available Colors
+//! Light
+$c-f5f5ff: #f5f5ff;
+$c-eae7ff: #eae7ff;
+$c-d1cbff: #d1cbff;
+$c-b2a2ff: #b2a2ff;
+$c-9779ff: #9779ff;
+$c-7d4cff: #7d4cff;
+$c-6303ef: #6303ef;
+$c-4000af: #4000af;
+$c-220070: #220070;
+$c-10003f: #10003f;
+$c-fff4e1: #fff4e1;
+$c-ffe7bd: #ffe7bd;
+$c-ffc768: #ffc768;
+$c-f29b02: #f29b02;
+$c-c88000: #c88000;
+$c-9f6500: #9f6500;
+$c-784b01: #784b01;
+$c-513400: #513400;
+$c-2f1d00: #2f1d00;
+$c-180d00: #180d00;
+$c-fff2f2: #fff2f2;
+$c-ffe3e2: #ffe3e2;
+$c-ffc1bf: #ffc1bf;
+$c-ff8d8b: #ff8d8b;
+$c-ff514c: #ff514c;
+$c-e11700: #e11700;
+$c-aa0f01: #aa0f01;
+$c-721800: #721800;
+$c-411000: #411000;
+$c-220700: #220700;
+$c-eef7ff: #eef7ff;
+$c-dbebff: #dbebff;
+$c-afd4ff: #afd4ff;
+$c-6fb1ff: #6fb1ff;
+$c-0094f1: #0094f1;
+$c-0075c1: #0075c1;
+$c-015892: #015892;
+$c-003d62: #003d62;
+$c-00233a: #00233a;
+$c-00111c: #00111c;
+$c-eff7f0: #eff7f0;
+$c-d9efda: #d9efda;
+$c-a4dfa6: #a4dfa6;
+$c-00c948: #00c948;
+$c-00a63a: #00a63a;
+$c-00842c: #00842c;
+$c-01631f: #01631f;
+$c-17421c: #17421c;
+$c-132513: #132513;
+$c-091109: #091109;
+$c-f5f5f5: #f5f5f5;
+$c-e9e9e9: #e9e9e9;
+$c-d0d0d1: #d0d0d1;
+$c-aeaeae: #aeaeae;
+$c-8f8f8f: #8f8f8f;
+$c-727272: #727272;
+$c-555555: #555555;
+$c-3a3939: #3a3939;
+$c-212120: #212120;
+$c-100f0f: #100f0f;
+//! Dark
+$c-171616: #171616;
+$c-0a003b: #0a003b;
+$c-19005c: #19005c;
+$c-30008f: #30008f;
+$c-4b28ab: #4b28ab;
+$c-6a26f4: #6a26f4;
+$c-8259fe: #8259fe;
+$c-a088fe: #a088fe;
+$c-c1b5ff: #c1b5ff;
+$c-e1deff: #e1deff;
+$c-f3f3ff: #f3f3ff;
+$c-130c00: #130c00;
+$c-251700: #251700;
+$c-402800: #402800;
+$c-613e0b: #613e0b;
+$c-845300: #845300;
+$c-a96b00: #a96b00;
+$c-d68900: #d68900;
+$c-fdb000: #fdb000;
+$c-ffdc9f: #ffdc9f;
+$c-fff2da: #fff2da;
+$c-1f0500: #1f0500;
+$c-350a00: #350a00;
+$c-591400: #591400;
+$c-871c0c: #871c0c;
+$c-bb1100: #bb1100;
+$c-e92918: #e92918;
+$c-ff6963: #ff6963;
+$c-ffa8a5: #ffa8a5;
+$c-ffd8d6: #ffd8d6;
+$c-fff0f0: #fff0f0;
+$c-000f1d: #000f1d;
+$c-001b2f: #001b2f;
+$c-00304d: #00304d;
+$c-174871: #174871;
+$c-0161a0: #0161a0;
+$c-017ccc: #017ccc;
+$c-3d9ff6: #3d9ff6;
+$c-8ec3ff: #8ec3ff;
+$c-cbe4ff: #cbe4ff;
+$c-ebf4ff: #ebf4ff;
+$c-080f08: #080f08;
+$c-0f1d0f: #0f1d0f;
+$c-163318: #163318;
+$c-14501e: #14501e;
+$c-016d23: #016d23;
+$c-018d2f: #018d2f;
+$c-01b33f: #01b33f;
+$c-6fd478: #6fd478;
+$c-c9eaca: #c9eaca;
+$c-ecf6ee: #ecf6ee;
+$c-0e0d0d: #0e0d0d;
+$c-1a1919: #1a1919;
+$c-2d2d2d: #2d2d2d;
+$c-464545: #464545;
+$c-5e5e5e: #5e5e5e;
+$c-797979: #797979;
+$c-9a9a9a: #9a9a9a;
+$c-bfbfbf: #bfbfbf;
+$c-e1e1e1: #e1e1e1;
+$c-f4f4f4: #f4f4f4;
+//* Body Styles
+$body: (
+  color: $black,
+  text-align: left,
+  background-color: #f8f8f8,
+);
+//* Link Styles
+$link: (
+  color: $c-0094f1,
+  hover-color: $c-0094f1,
+  visited-color: $c-9779ff,
+  text-decoration: none,
+);
+// font-size:(.*)59px

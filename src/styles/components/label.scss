@@ -1,0 +1,14 @@
+@import 'styles/abstracts/variables.scss';
+
+.custom-label {
+  margin-bottom: $d-21;
+  color: $black;
+  font-size: $fs-16;
+  font-weight: $fw-600;
+  line-height: $line-height-132;
+  cursor: pointer;
+  &-info {
+    margin-left: 4px;
+    color: $c-727272;
+  }
+}

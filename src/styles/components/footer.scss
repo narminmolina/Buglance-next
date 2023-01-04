@@ -1,0 +1,104 @@
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.footer {
+  @include mobile {
+    padding: $m-51 0;
+  }
+  padding-bottom: $d-194;
+  padding-top: $d-112;
+  &-wrapper {
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+    display: flex;
+    justify-content: space-between;
+    .copyright-and-partners {
+      .copyright {
+        @include mobile {
+          max-width: 240px;
+          font-size: $fs-14;
+          line-height: $line-height-117;
+        }
+        display: block;
+        color: $black;
+        font-size: $fs-16;
+        font-weight: $fw-500;
+        line-height: $line-height-132;
+      }
+      .partners {
+        @include mobile {
+          margin-top: $m-27;
+        }
+        display: flex;
+        margin-top: $d-37;
+        .partner-link {
+          @include flex-centered;
+          &:not(:last-child) {
+            margin-right: $d-37;
+          }
+        }
+      }
+    }
+    nav {
+      ul.internal–links {
+        @include mobile {
+          grid-template-rows: repeat(1, 1fr);
+          grid-template-columns: repeat(1, 1fr);
+          grid-row-gap: $m-27;
+        }
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: $d-21;
+        grid-column-gap: 126px;
+        a {
+          color: $black;
+          font-size: $fs-16;
+          font-weight: $fw-500;
+          font-style: normal;
+          line-height: $line-height-132;
+          text-decoration-line: underline;
+        }
+      }
+      ul.socials {
+        @include mobile {
+          margin-bottom: $d-28;
+        }
+        display: flex;
+        margin-top: $d-28;
+        li {
+          &:not(:last-child) {
+            margin-right: $d-21;
+          }
+          a {
+            span {
+              @include size($d-28);
+              @include mobile {
+                @include size($m-33);
+              }
+              display: inline-block;
+              background-size: cover;
+              background-repeat: no-repeat;
+              &.twitter {
+                @include twitter;
+              }
+              &.mail {
+                @include mail;
+              }
+              &.linkedin {
+                @include linkedin;
+              }
+              &.instagram {
+                @include instagram;
+              }
+              &.facebook {
+                @include facebook;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

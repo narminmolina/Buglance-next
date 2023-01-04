@@ -1,0 +1,19 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.error,
+.error-404 {
+  // margin: calc(112px + 85px) 0;
+  margin: 112px 0;
+  @include mobile {
+    // margin: calc(41px + 51px) 0;
+    margin: 41px 0;
+  }
+  h1 {
+    margin-bottom: $d-64;
+    @include mobile {
+      margin-bottom: 33px;
+    }
+  }
+}

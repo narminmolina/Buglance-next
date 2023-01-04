@@ -1,0 +1,54 @@
+.Dropdown {
+  &-root {
+    &.is-open {
+      .Dropdown-placeholder {
+        color: $c-0094f1;
+      }
+    }
+  }
+  &-control {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    cursor: pointer;
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+  &-placeholder {
+    padding-right: 3px;
+    color: $black;
+    font-size: $fs-16;
+    font-weight: $fw-600;
+    line-height: $line-height-132;
+    &.is-selected {
+      color: $c-0094f1;
+    }
+  }
+  &-menu {
+    width: auto;
+    right: 0;
+    max-height: unset;
+    white-space: nowrap;
+    margin-top: $d-7;
+    border: 1px solid $c-afd4ff;
+    border-radius: $br-7;
+    padding: 0;
+    min-width: 200px;
+  }
+  &-option {
+    font-weight: $fw-500;
+    font-size: $fs-16;
+    line-height: $line-height-132;
+    color: $black;
+    padding: $d-16 $d-12;
+    &:hover {
+      color: $black;
+    }
+    &.is-selected {
+      color: $black;
+    }
+  }
+}

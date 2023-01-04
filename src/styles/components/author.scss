@@ -1,0 +1,52 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.author-info {
+  display: flex;
+  align-items: flex-start;
+  &-visual {
+    border-radius: 50%;
+    @include size(64px);
+    @include mobile {
+      border-radius: 50%;
+      @include size(51px);
+    }
+  }
+  &-text {
+    margin-left: $d-16;
+    strong,
+    h2 {
+      display: flex;
+      align-items: center;
+      margin-bottom: $d-7;
+      font-size: $fs-21;
+      font-weight: $fw-700;
+      line-height: $line-height-136;
+      a {
+        color: $black;
+        text-decoration: none;
+        svg {
+          display: block;
+          width: $d-16;
+          height: $d-16;
+          margin-left: $d-7;
+        }
+      }
+      @include mobile {
+        font-size: $fs-17;
+        line-height: $line-height-136;
+      }
+    }
+    em {
+      font-size: $fs-16;
+      font-weight: $fw-500;
+      font-style: normal;
+      line-height: $line-height-136;
+      @include mobile {
+        font-size: $fs-14;
+        line-height: $line-height-136;
+      }
+    }
+  }
+}

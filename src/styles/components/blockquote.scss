@@ -1,0 +1,78 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+blockquote {
+  display: flex;
+  align-items: flex-start;
+  margin: $d-64 0;
+  h4 {
+    color: #0094f1;
+    font-size: $fs-35;
+    font-weight: $fw-600;
+    line-height: $line-height-120;
+    &::after {
+      content: '“';
+    }
+    &::before {
+      content: '”';
+    }
+    @include mobile {
+      margin-top: 17px;
+      font-size: $fs-19;
+      line-height: $line-height-136;
+    }
+  }
+  &[data-color='blue'] {
+    h4 {
+      color: #0094f1;
+    }
+  }
+  &[data-color='red'] {
+    h4 {
+      color: #ff514c;
+    }
+  }
+  &[data-type='simple'] {
+    display: block;
+    h4 {
+      margin-bottom: $d-21;
+    }
+  }
+  &[data-type='complex'] {
+    display: flex;
+    h4 {
+      max-width: 731px;
+      margin-left: $d-28;
+      @include mobile {
+        margin-left: 0;
+      }
+    }
+  }
+  .simple-author {
+    display: flex;
+    align-items: center;
+    font-size: $fs-21;
+    line-height: $line-height-136;
+    small {
+      margin-left: $d-7;
+      font-family: $open-sans;
+      font-size: $fs-21;
+      @include mobile {
+        margin-left: 0;
+        font-size: $fs-14;
+        line-height: $line-height-136;
+      }
+    }
+    @include mobile {
+      align-items: flex-start;
+      flex-direction: column;
+      font-size: $fs-17;
+      line-height: $line-height-136;
+    }
+  }
+  @include mobile {
+    flex-direction: column;
+    margin: 33px 0;
+  }
+}

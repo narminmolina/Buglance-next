@@ -1,0 +1,191 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.startups {
+  .testing-process {
+    margin-bottom: 112px;
+    padding-bottom: 40px;
+    background-color: #afd4ff;
+    @include mobile {
+      margin: 0 -17px;
+      margin-bottom: 51px;
+      padding: 0 17px 3px;
+    }
+    .heading-container {
+      padding: 0px 129px;
+      @include mobile {
+        padding: 0px;
+      }
+      h1 {
+        @include mobile {
+          font-size: 22px;
+        }
+      }
+    }
+    .testing-process-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 84px;
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 -17px;
+        padding: 0 17px 51px;
+        text-align: center;
+      }
+      .testing-process-item {
+        margin-bottom: 0;
+        text-align: center;
+        h2 {
+          margin: 26px 0 12px;
+          font-size: 27px;
+          line-height: 1.2;
+          @include mobile {
+            font-size: 17px;
+          }
+        }
+
+        p {
+          font-family: $open-sans;
+          font-size: 21px;
+          line-height: 1.36;
+          @include mobile {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .apply-buglance {
+    margin-bottom: 112px;
+    &-items {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: 318px 636px;
+      // grid-column-gap: 123px;
+      @include mobile {
+        margin-bottom: 0;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .apply-buglance-item {
+        h1 {
+          font-size: 46px;
+          line-height: 1.2;
+          @include mobile {
+            font-size: 22px;
+          }
+          strong {
+            color: #ff514c;
+          }
+        }
+        h3 {
+          margin-top: 25px;
+          margin-bottom: 20px;
+          font-size: 27px;
+          line-height: 1.2;
+          @include mobile {
+            font-size: 17px;
+          }
+        }
+        .check-list {
+          @include mobile {
+            width: 100%;
+            font-size: 22px;
+          }
+          li {
+            display: grid;
+            margin-bottom: 15px;
+            font-family: $open-sans;
+            line-height: 1.36;
+            grid-column-gap: 12px;
+            grid-template-columns: 21px auto;
+            @include mobile {
+              margin-bottom: 20px;
+              font-size: 14px;
+            }
+            &:before {
+              display: inline-block;
+              width: 21px;
+              height: 21px;
+              background-size: cover;
+              content: '';
+              @include check-black;
+            }
+          }
+          &.green-check {
+            li {
+              &:before {
+                @include check-green;
+              }
+            }
+          }
+          &.black-check {
+            li {
+              &:before {
+                @include check-black;
+              }
+            }
+          }
+        }
+        .form-cart {
+          padding: 64px 95px;
+          border: 3px solid #000000;
+          border-radius: 37px;
+          @include mobile {
+            margin-top: 17px;
+            margin-bottom: 0;
+            padding: 35px 0px;
+            border: 0;
+            border-top: 3px solid black;
+            border-radius: 0;
+            grid-template-columns: repeat(1, 1fr);
+          }
+
+          .custom-react-select {
+            margin-bottom: 28px;
+          }
+          .custom-input {
+            margin-bottom: 28px;
+          }
+
+          h2 {
+            margin-bottom: 22px;
+            font-size: 35px;
+            line-height: 1.2;
+            @include mobile {
+              padding-right: 53px;
+              font-size: 19px;
+            }
+          }
+
+          .custom-button {
+            width: 100%;
+            margin-top: 47px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.learn-more {
+  h1 {
+    @include mobile {
+      padding: 0 30px;
+    }
+  }
+  .custom-link-button {
+    display: block;
+    width: 352px;
+    margin: 0 auto;
+    @include mobile {
+      width: 186px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 41px;
+    }
+  }
+}

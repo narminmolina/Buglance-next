@@ -1,0 +1,98 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.input-button-hybrid {
+  padding: 0 17px;
+  form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: $d-49;
+    position: relative;
+    z-index: 2;
+    @include mobile {
+      height: unset;
+      align-items: center;
+      flex-direction: column;
+    }
+    &:hover,
+    &:focus,
+    &:focus-within {
+      outline: none;
+      input {
+        border: 3px solid #015892;
+      }
+      button {
+        background-color: #015892;
+      }
+    }
+  }
+
+  label {
+    @include mobile {
+      width: 100%;
+    }
+  }
+  input {
+    height: 100%;
+    background: $white;
+    border: 3px solid #0075c1;
+    padding: 14px $d-16;
+    border-radius: $d-7 0px 0px $d-7;
+    min-width: 385px;
+    line-height: $line-height-160;
+    @include mobile {
+      min-width: unset;
+      width: 100%;
+      border-radius: $d-7;
+      margin-bottom: 9px;
+      font-size: $fs-14;
+      padding: 8.5px 10px;
+      line-height: $line-height-132;
+      &::placeholder {
+        text-align: center;
+      }
+    }
+  }
+  button {
+    border: 0;
+    padding: 0 $d-28;
+    border-radius: 0px $d-7 $d-7 0px;
+    color: $white;
+    font-size: $fs-16;
+    font-weight: $fw-600;
+    line-height: $line-height-132;
+    text-align: center;
+    background-color: #0075c1;
+    @include mobile {
+      width: 100%;
+      height: 41px;
+      font-size: $fs-14;
+      border-radius: $d-7;
+      line-height: $line-height-117;
+    }
+  }
+  input,
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
+  &[data-color='default'] {
+    input {
+      border: 3px solid #0075c1;
+    }
+    button {
+      background-color: #0075c1;
+    }
+  }
+  &[data-color='primary'] {
+    input {
+      border: 3px solid $black;
+    }
+    button {
+      background-color: $black;
+    }
+  }
+}

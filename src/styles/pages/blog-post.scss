@@ -1,0 +1,202 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.blog-post {
+  margin-top: $d-49;
+  &-main-info {
+    h1 {
+      font-size: $fs-59;
+      font-weight: $fw-700;
+      line-height: $line-height-120;
+      @include mobile {
+        font-size: $fs-23;
+        line-height: $line-height-115;
+      }
+    }
+    time {
+      display: block;
+      margin: $d-16 0 $d-64;
+      font-size: $fs-16;
+      font-weight: $fw-500;
+      line-height: $line-height-120;
+      @include mobile {
+        margin: 11px 0 33px;
+        font-size: $fs-14;
+        line-height: $line-height-120;
+      }
+    }
+    .summary-author {
+      display: flex;
+      padding: $d-64 0;
+      margin-bottom: $d-85;
+      border-bottom: 3px solid $black;
+      .summary {
+        max-width: 731px;
+        margin-right: $d-28;
+        font-family: $open-sans;
+        font-size: $fs-21;
+        line-height: $line-height-136;
+        @include mobile {
+          max-width: unset;
+          margin-bottom: 17px;
+          margin-right: unset;
+          font-size: $fs-17;
+          line-height: $line-height-136;
+        }
+      }
+      @include mobile {
+        flex-direction: column;
+        padding-top: 33px;
+        margin-bottom: 31px;
+      }
+    }
+  }
+  &-content {
+    &-wrapper {
+      padding-bottom: $d-112;
+      border-bottom: 3px solid $black;
+      @include mobile {
+        padding-bottom: 51px;
+      }
+    }
+    h2 {
+      margin-bottom: $d-28;
+      font-size: $fs-46;
+      font-weight: $fw-700;
+      line-height: $line-height-120;
+      @include mobile {
+        font-size: $fs-20;
+        line-height: $line-height-117;
+        margin-bottom: 17px;
+      }
+    }
+    h3 {
+      font-size: $fs-35;
+      line-height: $line-height-120;
+      margin-bottom: $d-28;
+      font-weight: $fw-600;
+      @include mobile {
+        font-size: $fs-17;
+        line-height: $line-height-117;
+      }
+    }
+    p {
+      max-width: 731px;
+      margin-bottom: $d-28;
+      font-family: $open-sans;
+      font-size: $fs-21;
+      line-height: $line-height-136;
+      @include mobile {
+        font-size: $fs-17;
+        line-height: $line-height-136;
+        margin-bottom: 12px;
+      }
+    }
+    .image-block {
+      img {
+        &.full-width {
+          // margin-top: $d-49;
+          @include mobile {
+            // margin-top: 33px;
+          }
+        }
+      }
+      small {
+        display: block;
+        margin: $d-16 0 $d-49;
+        color: #727272;
+        font-family: $open-sans;
+        font-size: $fs-16;
+        font-weight: $fw-600;
+        line-height: $line-height-120;
+        @include mobile {
+          margin: 7px 0 33px;
+          font-size: $fs-14;
+          line-height: $line-height-120;
+        }
+      }
+    }
+    .simple-image-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 731px;
+      @include mobile {
+        margin: $m-17 auto;
+      }
+    }
+    .simple-image {
+      max-width: 100%;
+      height: auto;
+      margin: $d-37 auto;
+      @include mobile {
+        margin: $m-17 auto;
+      }
+    }
+    a {
+      text-decoration: underline;
+    }
+    ul {
+      max-width: 731px;
+      padding-left: 40px;
+      margin-bottom: $d-64;
+      font-family: $open-sans;
+      font-size: $fs-21;
+      line-height: $line-height-136;
+      @include mobile {
+        font-size: $fs-17;
+      }
+      li {
+        &:before {
+          content: '';
+          display: inline-block;
+          width: $d-12;
+          height: $d-12;
+          margin-left: -40px;
+          margin-right: $d-28;
+          border-radius: 50%;
+          background-size: cover;
+          background-color: #0094f1;
+          @include mobile {
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: $d-21;
+          @include mobile {
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+  .ebook-section {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin: $d-85 -50vw;
+    @include mobile {
+      margin: 33px -50vw;
+    }
+  }
+  .content-with-aside-banner {
+    display: flex;
+    align-items: flex-start;
+    &[data-direction='row'] {
+      flex-direction: row;
+      .aside-banner {
+        margin-left: $d-28;
+      }
+    }
+    &[data-direction='row-reverse'] {
+      flex-direction: row-reverse;
+      .aside-banner {
+        margin-right: $d-28;
+      }
+    }
+  }
+  @include mobile {
+    margin-top: 41px;
+  }
+}

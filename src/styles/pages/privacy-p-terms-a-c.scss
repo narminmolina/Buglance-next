@@ -1,0 +1,79 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.privacy-policy,
+.terms-and-conditions {
+  // margin-top: calc(112px + 85px);
+  margin-top: 112px;
+  @include mobile {
+    margin-top: calc(41px + 51px);
+  }
+  h1 {
+    margin-bottom: $d-28;
+    font-size: $fs-59;
+    font-weight: $fw-700;
+    line-height: $line-height-120;
+    @include mobile {
+      font-size: $fs-23;
+      line-height: $line-height-115;
+      margin-bottom: 17px;
+    }
+  }
+  h2 {
+    margin-bottom: $d-28;
+    font-size: $fs-46;
+    font-weight: $fw-700;
+    line-height: $line-height-120;
+    @include mobile {
+      font-size: $fs-20;
+      line-height: $line-height-117;
+      margin-bottom: 17px;
+    }
+  }
+  p {
+    margin-bottom: $d-16;
+    font-family: $open-sans;
+    font-size: $fs-21;
+    font-weight: $fw-400;
+    font-style: normal;
+    line-height: $line-height-136;
+    @include mobile {
+      font-size: $fs-17;
+      line-height: $line-height-136;
+    }
+  }
+  h3 {
+    font-size: $fs-35;
+    line-height: $line-height-120;
+    margin-bottom: $d-28;
+    font-weight: $fw-600;
+    @include mobile {
+      font-size: $fs-17;
+      line-height: $line-height-117;
+    }
+  }
+  ul,
+  ol {
+    padding: 0 $d-21;
+    margin: $d-28 0;
+    list-style: disc;
+    @include mobile {
+      margin-bottom: 0;
+    }
+    li {
+      margin-bottom: $d-16;
+      font-size: $fs-21;
+      line-height: $line-height-136;
+      @include mobile {
+        font-size: $fs-17;
+        line-height: $line-height-136;
+        margin-bottom: $m-14;
+      }
+    }
+  }
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+}

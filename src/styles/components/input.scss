@@ -1,0 +1,45 @@
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.custom-input {
+  input {
+    width: 100%;
+    height: $d-49;
+    border: 1px solid $c-8f8f8f;
+    border-radius: $br-7;
+    font-size: $fs-16;
+    font-weight: $fw-500;
+    line-height: $line-height-160;
+    padding: 14px $d-16;
+    color: $black;
+    &[data-size='xs'] {
+    }
+    &[data-size='sm'] {
+    }
+    &[data-size='md'] {
+    }
+    &[data-size='lg'] {
+    }
+    &[data-size='xl'] {
+      height: $d-64;
+      padding: 18px;
+      font-size: $fs-21;
+    }
+    &:focus,
+    &:hover {
+      @include hover-focus-effect;
+    }
+    &::placeholder {
+      color: $c-727272;
+      opacity: 1;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      @include hover-focus-effect;
+      -webkit-text-fill-color: $black;
+      -webkit-box-shadow: 0 0 0px 1000px $white inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+}

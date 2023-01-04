@@ -1,0 +1,304 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.about {
+  .management {
+    overflow: hidden;
+    padding-bottom: 112px;
+    background-color: #afd4ff;
+    &-wrapper {
+      @include mobile {
+        padding: 0 17px;
+      }
+    }
+    h1 {
+      padding-bottom: 85px;
+      @include mobile {
+        padding-bottom: 33px;
+      }
+    }
+    figure {
+      position: relative;
+      width: 736px;
+      min-height: $d-340;
+      margin: 0 auto 85px;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 100px;
+        height: 100px;
+        transform: translate(0%, -50%);
+        @include mobile {
+          display: none;
+        }
+      }
+      &::before {
+        left: -60%;
+      }
+      &::after {
+        right: -60%;
+      }
+      .mobile-author {
+        display: none;
+        @include mobile {
+          display: block;
+        }
+        .svg {
+          width: 100%;
+          display: block;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+      .desktop-author {
+        display: block;
+        .svg {
+          display: none;
+        }
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .desktop-author,
+      .mobile-author {
+        h2 {
+          font-size: $fs-35;
+          font-weight: $fw-600;
+          line-height: $line-height-120;
+          a {
+            margin-left: 11px;
+          }
+          @include mobile {
+            font-size: $fs-19;
+            line-height: $line-height-136;
+          }
+        }
+        strong {
+          display: block;
+          margin: 9px 0 21px;
+          font-size: $fs-21;
+          font-weight: $fw-600;
+          line-height: $line-height-136;
+          @include mobile {
+            margin: 7px 0;
+            font-size: $fs-15;
+          }
+        }
+      }
+      .picture-wrapper {
+        width: 256px;
+        height: 340px;
+        //
+        shape-outside: ellipse(120px 160px at 50% 50%);
+        shape-margin: 1em;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        @include mobile {
+          display: flex;
+          width: 100%;
+          height: unset;
+          img {
+            width: 86px;
+            height: 114px;
+            margin-right: 14px;
+            @include mobile {
+              height: 114px;
+              width: 86px;
+            }
+          }
+        }
+        .mobile-author {
+          .svg {
+            height: 24px;
+          }
+        }
+      }
+      figcaption {
+        p {
+          font-family: $open-sans;
+          font-size: $fs-16;
+          line-height: $line-height-140;
+          @include mobile {
+            font-size: $fs-14;
+            line-height: $line-height-136;
+          }
+        }
+      }
+      &.management-main {
+        .picture-wrapper {
+          margin-right: 28px;
+          float: left;
+          clip-path: ellipse(120px 160px at 47% 47%);
+          @include mobile {
+            margin-bottom: 14px;
+            margin-right: unset;
+            float: unset;
+            clip-path: none;
+          }
+
+          .mobile-author {
+            .svg {
+              background-image: url("data:image/svg+xml,%3Csvg width='186' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 21.5C50 21.5 62.5 2 50 2s0 20 43 20 55-20 43-20 0 19.5 50 19.5' stroke='%23000' stroke-width='3.5'/%3E%3C/svg%3E");
+            }
+          }
+        }
+        &::before,
+        &::after {
+          width: 380px;
+          height: 255px;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url("data:image/svg+xml,%3Csvg width='370' height='250' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M364.608 51.4945C205.013-9.49167 234.891 257.44 334.001 237.268 433.11 217.095 259.247-19.2163 127.344 9.40028-4.55869 38.0169 76.332 258.974 149.206 242.086c72.875-16.888-56.8416-134.639-147.20599-103.207' stroke='%23000' stroke-width='12'/%3E%3C/svg%3E");
+        }
+        &::after {
+          transform: translate(0%, -50%) rotate(180deg);
+        }
+      }
+      &.management-secondary {
+        text-align: right;
+        .picture-wrapper {
+          margin-left: 28px;
+          float: right;
+          clip-path: ellipse(120px 160px at 49% 51%);
+          @include mobile {
+            margin-bottom: 14px;
+            margin-left: unset;
+            float: unset;
+            clip-path: none;
+          }
+          .mobile-author {
+            .svg {
+              background-image: url("data:image/svg+xml,%3Csvg width='186' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M184.057 2.40872l.17 7.80428c-2.765 1.3922-6.71 2.6681-11.458 3.7726-5.26 1.2238-11.383 2.21-17.727 2.9247-12.71 1.4317-26.159 1.757-35.187.7766-4.146-.4502-8.894-.9852-13.953-1.5553-17.3298-1.9527-38.3079-4.3166-51.209-5.0888-8.4199-.5039-19.0441-.1719-29.1336.9295-8.8617.9673-17.43939 2.5413-23.78434 4.7226l.08263-8.38191C19.677 1.75548 39.7827.881726 63.7863 3.38159 81.9016 5.26823 110.75 7.86578 121.316 8.40445c17.626 2.05775 33.861.37177 45.68-1.8226 5.92-1.09914 10.744-2.32793 14.094-3.28421 1.175-.3355 2.17-.63758 2.967-.88892z' stroke='%23000' stroke-width='3.5'/%3E%3C/svg%3E");
+            }
+          }
+        }
+        &::before,
+        &::after {
+          width: 380px;
+          height: 255px;
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url("data:image/svg+xml,%3Csvg width='427' height='91' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M419.461 10.6461l.775 35.6119c-6.025 5.9671-14.814 11.5125-25.601 16.3821-11.725 5.293-25.452 9.6271-39.75 12.8204-28.739 6.4184-58.936 8.0459-78.944 4.156-9.428-1.8328-20.257-4.0215-31.816-6.3579-39.778-8.0398-88.21-17.8287-117.984-20.886-19.776-2.0306-44.4983-.3-67.8623 4.7636-18.7429 4.062-37.1024 10.3744-51.48777 18.9771l-.18925-38.0554C46.141 9.97151 90.9855 5.71328 145.41 15.8389c41.422 7.7064 107.453 18.2495 132.059 20.3955 41.278 8.6004 79.041.7515 106.345-9.1323 13.713-4.964 24.866-10.4687 32.61-14.7446 1.079-.5955 2.092-1.1676 3.037-1.7114z' stroke='%23000' stroke-width='12'/%3E%3C/svg%3E");
+        }
+        &::after {
+          transform: translate(0%, -50%) rotate(180deg);
+        }
+        @include mobile {
+          text-align: left;
+        }
+      }
+      @include mobile {
+        width: unset;
+        min-height: unset;
+        margin: 0 auto 33px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    @include mobile {
+      padding-bottom: 51px;
+      margin: 0 -17px;
+    }
+  }
+  .team {
+    position: relative;
+    @include mobile {
+      padding-top: 26px;
+    }
+    .container {
+      position: relative;
+    }
+    h1 {
+      max-width: 650px;
+      margin-left: auto;
+      text-align: right;
+      @include mobile {
+        max-width: 240px;
+      }
+    }
+    .heart-illustration {
+      position: absolute;
+      top: 150px;
+      left: 110px;
+      @include mobile {
+        top: 0;
+        left: 0;
+        width: 86px;
+        height: 59px;
+      }
+    }
+  }
+  .address-contact-info {
+    &-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: $d-64 0;
+      border-bottom: 3px solid $black;
+      address {
+        margin-bottom: 0;
+        strong {
+          display: block;
+          margin-bottom: 12px;
+          font-size: $fs-27;
+          font-weight: $fw-600;
+          line-height: $line-height-128;
+          @include mobile {
+            margin-bottom: 7px;
+            font-size: $fs-17;
+          }
+        }
+        p {
+          font-family: $open-sans;
+          line-height: $line-height-120;
+          @include mobile {
+            font-size: $fs-14;
+          }
+        }
+        @include mobile {
+          margin-bottom: 22px;
+        }
+      }
+      ul.contact {
+        li {
+          font-size: $fs-16;
+          font-weight: $fw-600;
+          line-height: $line-height-132;
+          &:not(:last-child) {
+            margin-bottom: 12px;
+            @include mobile {
+              margin-bottom: 24px;
+            }
+          }
+          em {
+            font-style: normal;
+            &:after {
+              content: ':';
+              display: inline-block;
+              margin-right: 7px;
+            }
+          }
+          @include mobile {
+            font-size: $fs-14;
+          }
+        }
+      }
+      @include mobile {
+        flex-direction: column;
+        padding: 41px 0;
+      }
+    }
+  }
+}

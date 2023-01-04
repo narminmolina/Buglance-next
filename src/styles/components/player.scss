@@ -1,0 +1,37 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.player-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: $d-85;
+  @include mobile {
+    margin: 33px 0;
+    flex-direction: column !important;
+  }
+  &[data-direction='row-reverse'] {
+    flex-direction: row-reverse;
+  }
+  & > div {
+    width: 731px !important;
+    height: 411px !important;
+    @include mobile {
+      width: 100% !important;
+      height: 147px !important;
+    }
+  }
+  .player-description {
+    max-width: 351px;
+    @include mobile {
+      margin-top: 17px;
+    }
+  }
+  .react-player__preview svg {
+    @include mobile {
+      @include size(41px);
+    }
+  }
+}

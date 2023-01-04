@@ -1,0 +1,51 @@
+@import 'styles/base/icons.scss';
+@import 'styles/abstracts/mixins.scss';
+@import 'styles/abstracts/variables.scss';
+
+.custom-react-select {
+  .react-select {
+    &__control {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      min-height: $d-49;
+      padding: 4px 12px;
+      border: 1px solid $c-8f8f8f;
+      border-radius: $br-7;
+      box-sizing: border-box;
+      cursor: default;
+      outline: 0 !important;
+      transition: $transition-base;
+      /* white */
+      background-color: #ffffff;
+      &:hover,
+      &--is-focused {
+        @include hover-focus-effect;
+        cursor: pointer;
+      }
+    }
+    &__value-container {
+      padding: 0;
+    }
+    &__placeholder {
+      @include mobile {
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+    &__indicators {
+      display: flex;
+      height: 16px;
+      all: unset;
+      &:not(:empty) {
+      }
+      svg:last-child {
+        margin-left: 7px;
+      }
+    }
+  }
+}
